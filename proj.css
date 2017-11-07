@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.slider .slides li .caption{
+  color:white;
+  font-weight:bold;
+  top:20%;
+  text-shadow: 2px 2px black;
+}
+
+.slider .slides li img{
+  filter: saturate(50%) opacity(95%) brightness(80%) ;
+
+}
+
+.sub{
+  color:white;
+  text-shadow: 1px 1px black;
+}
+
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1400px) {
+  /* Styles */
+  .slides li{
+    min-height: 600px;
+  }
+
+  .slider{
+    height: 600px !important;
+  }
+
+  .slides{
+    height: 600px !important;
+  }
+
+}
+
+@media only screen  and (max-width : 600px) {
+  /* Styles */
+  .parallax-container {
+    height: 400px;
+  }
+
+  #email iframe{
+    height:350px;
+  }
+
+
+}
+
+
+
+.parallax-container h5{
+  color:white;
+  font-weight: 700;
+}
+
+
+.parallax-container img{
+  filter: saturate(50%) opacity(95%) brightness(50%);
+}
+#about{
+  margin-top:-50px ;
+  padding-top:50px;
+}
+
+#projects{
+  margin-top:-50px ;
+  padding-top:50px;
+}
+
+
+
+p{
+    text-align: center;
+}
+
+.nav-wrapper{
+    color:black;
+    background-color:#455a64;
+    width: 100%;
+    height: 56px;
+    
+}
+
+
+
+.material-icons {
+  font-size:6rem;
+}
+
+.side-nav .background img{
+  filter: saturate(50%) opacity(95%) brightness(50%) blur(1px) ;
+}
+
+.navMargin{
+  margin-left: 20px;
+}

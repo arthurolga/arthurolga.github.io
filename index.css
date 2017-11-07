@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.slider{
+  top:-15px;
+}
+.slider .slides li .caption{
+  color:white;
+  font-weight:bold;
+  top:20%;
+  text-shadow: 2px 2px black;
+}
+
+.slider .slides li img{
+  filter: saturate(50%) opacity(95%) brightness(80%) ;
+
+}
+
+.sub{
+  color:white;
+  text-shadow: 1px 1px black;
+}
+
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1200px) {
+  /* Styles */
+  .slides li{
+    min-height: 600px;
+  }
+
+  .slider{
+    height: 600px !important;
+  }
+
+  .slides{
+    height: 600px !important;
+  }
+
+}
+
+@media only screen  and (max-width : 600px) {
+  /* Styles */
+  .parallax-container {
+    height: 400px;
+  }
+
+}
+
+.parallax-container h5{
+  color:white;
+  font-weight: 700;
+}
+
+.parallax-container img{
+  filter: saturate(50%) opacity(95%) brightness(50%);
+}
+#about{
+  margin-top:-50px ;
+  padding-top:50px;
+}
+
+#projects{
+  margin-top:-50px ;
+  padding-top:50px;
+}
+
+.side-nav .background img{
+  filter: saturate(50%) opacity(95%) brightness(50%) blur(1px) ;
+
+}
+.material-icons {
+  font-size:6rem;
+}
+
+.card-title{
+  text-shadow: 1px 1px black;
+}
+
+figure.effect-bubba h2 {
+	padding-top: 0;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba img {
+height:100%;
+}
+
+
+nav ul li a.active {
+  background: rgba(0,0,0,0.2);
+}
