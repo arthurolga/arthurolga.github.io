@@ -1,0 +1,125 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ nav ul a,
+ nav .brand-logo {
+   color: #444;
+ }
+ p {
+   line-height: 2rem;
+   font-size: 20px;
+ }
+ 
+ .sidenav-trigger {
+   color: red;
+ }
+ 
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+ }
+   .parallax-container .section {
+     width: 100%;
+   }
+ 
+ @media only screen and (max-width : 992px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+ 
+ nav ul li:hover {
+    background-color: #ff8282;
+ }
+ 
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+ 
+ .icon-block {
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+   font-size: inherit;
+ }
+ .subtitle{
+  font-size: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid red;
+ }
+ .title-img{
+  position: relative;
+  width:100%;
+  overflow: hidden;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+}
+.title-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:40%;
+}
+.title{
+  background-color: #69060b;
+}
+.card-title{
+  text-shadow: 2px 2px 5px black;
+}
+.side-background{
+  background-color: #b2b2b2;
+  padding-bottom: 100%
+}
+.share{
+  position: absolute;
+}
+ footer.page-footer {
+   margin: 0;
+   background-color: #69060b;
+ }
+ 
+ 
+ #parallax-image {
+   filter: blur(5px);
+ }
+ 
+ #logo-img{
+   max-width: 100%;
+   max-height: 100%;
+ }
+ 
+ #banner{
+   background-color: red;
+   padding-bottom: 3px;
+ }
+
+ #card-title{
+  background-color:white;
+  text-decoration-color: black;
+ }
+
+
+#title-div{
+  margin-bottom: -30px;
+}
+
+#mobile-title{
+  margin-bottom: 5px;
+}

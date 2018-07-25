@@ -1,350 +1,187 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Paranoama de Mercado - Insper Jr</title>
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="./index.js"></script>
-    <!-- links for social icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./media-hover-effects.css">
-    <link rel="stylesheet" href="./index.css">
-    
-
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-
-<body class=''>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper #263238 blue-grey darken-4 ">
-                <a href="index.html" id="logo" class="brand-logo center">Portfolio</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="left hide-on-med-and-down">
-                    <li><a class="waves-effect" href="#slider_projects">Página Inicial</a></li>
-                    <li><a class="waves-effect" href="#about">Sobre Mim</a></li>
-                    <li><a class="waves-effect" href="#projects">Projetos</a></li>
-                    <li><a class="waves-effect" href="#contato">Contato</a></li>
-                </ul>
-
-            </div>
-        </nav>
-    </div>
-    <ul class="side-nav" id="mobile-demo">
-        <li><div class="user-view">
-                <div class="background">
-                    <img class="responsive-img" src="./bg_sidenav.jpg">
-                </div>
-                <a href="#!name"><span class="white-text name center">Portfolio de Arthur Quintella de Mello Olga</span></a>
-                <br> <br>                
-        </div></li>
-        <li class="active #546e7a blue-grey"><a class="waves-effect" href="index.html">Página Inicial</a></li>
-        <li><a class="waves-effect" href="#projects">Projetos</a></li>
-        <li><a class="waves-effect" href="#about">Sobre Mim</a></li>
-        <li><a class="waves-effect" href="#contato">Contato</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">© 2017 Co-Design</a></li>
-        <!-- <li><a class="waves-effect" href="#!">Random Text</a></li> -->
-        
-    </ul>
-    <div id="slider_projects" class="section scrollspy">
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <a href="./project_HardcoreViking.html"><img src="./vkdev.JPG">
-              <div class="caption center-align">
-                <h3>Jogo Hardcore Viking</h3>
-                <h5 class="sub">Projeto Final Design de Software</h5>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="./project_modsim3.html"><img src="./voleibol.jpg">
-              <div class="caption center-align">
-                <h3>Modelagem Voleibol</h3>
-                <h5 class="sub">Projeto Final Modelagem e Simulação</h5>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="./project_EstacMeter.html"><img src="./estacao2.png">
-              <div class="caption center-align">
-                <h3>Estação Metereológica</h3>
-                <h5 class="sub">Projeto Final Instrumentação e Medição</h5>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="./project_modsim2.html"><img src="./remedio.jpg">
-              <div class="caption center-align">
-                <h3 >Farmacocinética: Àlcool e Antinflamatório</h3>
-                <h5 class="sub">Modelagem e Simulação do Mundo Físico</h5>
-              </div>
-            </a>
-          </li>
+<body>
+  <div class="navbar-fixed">
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <img id="logo-img" href="#" class="brand-logo" src="logo.jpg">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Empresa</a></li>
+          <li><a href="index.html">Serviços</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
-      </div>
-    </div>     
 
-    <div id="about" class="section scrollspy">
-      <br></br>
-      <div class="container">
-        
-        
-        <div class="section">
-    
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="#">Empresa</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  <div class="hide-on-small-only">
+      <div class="title">
+          <img class="title-img" src="title.png">
+      </div>
+  </div>
+  <div class="hide-on-med-and-up">
+  <div class="container">
+
+      <div class="section">
+        <div class="row" id="mobile-title">
+          <div class="col s12 l9 offset-l1">
+            <font size="4" color="red">
+              <strong> Panorama de Mercado </strong>
+            </font>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 l9 offset-l1" id="banner">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+  
+
+  <div class="content-container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 l8 offset-l2">
           <div class="row">
-            <div class="col s12">
-              <div class="icon-block">
-                <div class="col s12"></div>
-                
-                
-      
-                <div class="col s4 offset-s4 center align">
-                    <img id="fotoperfil" width="100%" class="circle responsive-img center" src="./profilepic.png">
-                </div>
-                <h5 class="col s12 center">Sobre Mim</h5>
-                <p class="col s12 light" style="text-align:center;">Meu nome é Arthur Quintella de Mello Olga, 19 anos, nascido em São Paulo. Estudante de Engenharia da Computação no Insper. Interessado em Machine Learning, Web Design e Game Design. </p>
-              </div> 
-              
+            <div class="col s12 l8">
+              <font size="5" color="#69060b">Destaque</font>
+                <div class="card news-card">
+                    <div class="card-image">
+                      <img src="destaque.jpg">
+                      <span class="card-title"><strong>Noticia 1</strong></span>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="article.html">LEIA MAIS</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col s12 l4">
+                <font size="5" color="#69060b">Brasil</font>
+                <div class="card news-card">
+                    <div class="card-image">
+                      <img src="brasil.jpg">
+                      <span class="card-title"><strong>Noticia 2</strong></span>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="article.html">LEIA MAIS</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col s12 l4">
+                  <font size="5" color="#69060b">Mundo</font>
+                  <div class="card news-card">
+                      <div class="card-image">
+                        <img src="bolsa.jpg">
+                        <span class="card-title"><strong>Noticia 3</strong></span>
+                      </div>
+                      <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                      </div>
+                      <div class="card-action">
+                        
+                        <a href="article.html">LEIA MAIS</a>
+                      </div>
+                    </div>
               </div>
-    
-              <ul class="collection">
-
-                    <li class="collection-item avatar">
-                      <img src="https://pbs.twimg.com/profile_images/472106013806456832/_tLRMkFD_400x400.png" alt="" class="circle">
-                      <span class="title">Insper</span>
-                      <p>Engenharia da Computação <br>
-                          2017-
-                      </p>
-                      <a href="https://www.insper.edu.br/graduacao/engenharia-computacao/" tager="_blank" class="secondary-content"><i class="small material-icons">arrow_forward</i></a>
-                    </li>
-                    <li class="collection-item avatar">
-                      <img src="https://www.colegiodante.com.br/imagens/img_simbolos_01.gif" alt="" class="circle">
-          
-                      <span class="title">Colégio Dante Alighieri</span>
-                      <p>Ensino Médio <br>
-                          2012-2015
-                      </p>
-                      <a href="https://www.colegiodante.com.br/" class="secondary-content"><i class="small material-icons">arrow_forward</i></a>
-                    </li>
-                    <li class="collection-item avatar">
-                      <i class="material-icons circle green">insert_chart</i>
-                      <span class="title">ESPM</span>
-                      <p>Curso de extensão Big Data com Foco em Negócios <br>
-                          2017
-                      </p>
-                      <a href="#!" class="secondary-content"><i class="small material-icons">arrow_forward</i></a>
-                    </li>
-            </ul>
-            
-    
+              <div class="col s12 l4">
+                  <font size="5" color="#69060b">Economia</font>
+                  <div class="card news-card">
+                      <div class="card-image">
+                        <img src="stocks.jpg">
+                        <span class="card-title"><strong>Noticia 4</strong></span>
+                      </div>
+                      <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                      </div>
+                      <div class="card-action">
+                        <a href="article.html">LEIA MAIS</a>
+                      </div>
+                    </div>
+              </div>
+              <div class="col s12 l4">
+                  <font size="5">Bitcoin</font>
+                  <div class="card news-card">
+                      <div class="card-image">
+                        <img src="bitcoin.jpeg">
+                        <span class="card-title"><strong>Noticia </strong></span>
+                      </div>
+                      <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                      </div>
+                      <div class="card-action">
+                        <a href="article.html"><font color="69060b">LEIA MAIS</font></a>
+                      </div>
+                    </div>
+              </div>
           </div>
-
+            
+        
         </div>
-
       </div>
     </div>
-    </div>
-    <div id="projects" class="section scrollspy">
-        <div>
-            <div class="parallax-container valign-wrapper">
-                <div class="row center">
-                    <h5 class="header col s12 ">Projetos Desenvolvidos em Ambiente Acadêmico</h5>
-                </div>
-                <div class="parallax"><img src="o-CODING-facebook.jpg"></div>
-            </div>
-            <div class="container">
-                    <p class="center-align ">
-                      Abaixo você pode encontrar todos os projetos desenvolvidos ao longo de minha trajetória acadêmica.  
-                      
-                    </p>
-                <ul class="collapsible" data-collapsible="accordion">
-                    <li>
-                    <div class="collapsible-header active">
-                        <i id="programação" class="material-icons">code</i>
-                        Programação
-                        <span class="badge">6</span></div>
-                    <div class="collapsible-body">
-                            <div class="card">
-                                <div class="row">
-                                  <div class="col s12 m6 l4 grid">
-                                    <figure class="effect-bubba">
-                                      <img src="LOGO/vkthumbnail.png" alt="img02"/>
-                                      <figcaption>
-                                        <h5><br><span>Hardcore Viking</span></h5>
-                                        <p>Design de Software<br>Projeto Final.</p>
-                                        <a href="./project_HardcoreViking.html">View more</a>
-                                      </figcaption>     
-                                    </figure>
-                                  </div>
-                                    <div class="col s12 m6 l4 grid">
-                                      <figure class="effect-bubba">
-                                        <img src="LOGO/inspermom.png" alt="img02"/>
-                                        <figcaption>
-                                          <h5><br><span>Inspermon</span></h5>
-                                          <p>Design de Software<br>Projeto 2</p>
-                                          <a href="./project_inspermon.html">View more</a>
-                                        </figcaption>     
-                                      </figure>
-                                    </div>
-                                  <div class="col s12 m6 l4 grid">
-                                    <figure class="effect-bubba">
-                                      <img src="LOGO/estacao2.png" alt="img02"/>
-                                      <figcaption>
-                                        <h5><br><span>Estação Metereológica</span></h5>
-                                        <p>Instrumentação e Medição<br>Projeto Final.</p>
-                                        <a href="./project_EstacMeter.html">View more</a>
-                                      </figcaption>     
-                                    </figure>
-                                  </div>
-                                  <div class="col s12 m6 l4 grid">
-                                    <figure class="effect-bubba">
-                                      <img src="LOGO/o-CODING-facebook.jpg" alt="img02"/>
-                                      <figcaption>
-                                        <h5><br><span>Tubarões, Raias e Vieiras</span></h5>
-                                        <p>Modelagem e Simulação<br>Projeto 1</p>
-                                        <a href="./project_modsim1.html">View more</a>
-                                      </figcaption>     
-                                    </figure>
-                                  </div>
-                                  <div class="col s12 m6 l4 grid">
-                                      <figure class="effect-bubba">
-                                        <img src="LOGO/remedio.jpg" alt="img02"/>
-                                        <figcaption>
-                                          <h5>Famacocinética<br><span>Antinflamatório e Álcool</span></h5>
-                                          <p>Modelagem e Simulação<br>Projeto 2</p>
-                                          <a href="./project_modsim2.html">View more</a>
-                                        </figcaption>     
-                                      </figure>
-                                  </div>
-                                  <div class="col s12 m6 l4 grid">
-                                      <figure class="effect-bubba">
-                                        <img src="LOGO/voleibol.jpg" alt="img02"/>
-                                        <figcaption>
-                                          <h5>Modelagem<br><span>Voleibol</span></h5>
-                                          <p>Modelagem e Simulação<br>Projeto Final</p>
-                                          <a href="./project_modsim3.html">View more</a>
-                                        </figcaption>     
-                                      </figure>
-                                  </div>
-                                </div>
-                            </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="collapsible-header">
-                        <i class="material-icons">usb</i>
-                        Eletrônica
-                        <span class="badge">1</span></div>
-                    <div class="collapsible-body">
-                            <div class="card">
-                                <div class="row">
-                                    <div class="col s12 m6 l4 grid">
-                                        <figure class="effect-bubba">
-                                          <img src="LOGO/estacao2.png" alt="img02"/>
-                                          <figcaption>
-                                            <h5><br><span>Estação Metereológica</span></h5>
-                                            <p>Instrumentação e Medição<br>Projeto Final.</p>
-                                            <a href="./project_EstacMeter.html">View more</a>
-                                          </figcaption>     
-                                        </figure>
-                                      </div>
-                                  </div>
-                                </div>    
-                            
-                    </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                        <i class="material-icons">create</i>
-                        Design
-                        <span class="badge">1</span></div>
-                        <div class="collapsible-body">
-                            <div class="card">
-                                <div class="row">
-                                    <div class="col s12 m6 l4 grid">
-                                        <figure class="effect-bubba">
-                                          <img src="LOGO/ASmiQffbaz2BHR.jpg" alt="img02"/>
-                                          <figcaption>
-                                            <h5><br><span>Escalada Maluca</span></h5>
-                                            <p>Natureza do Design<br>Brinquedo</p>
-                                            <a href="./project_Brinquedo.html">View more</a>
-                                          </figcaption>     
-                                        </figure>
-                                      </div>
-                                  </div>
-                                </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div id="contato" class="collapsible-header">
-                            <i class="material-icons">account_balance</i>
-                            Escrita
-                            <span class="badge">1</span></div>
-                        <div class="collapsible-body">
-                            <div class="card">
-                                <div class="row">
-                                    <div class="col s12 m6 l4 grid">
-                                        <figure class="effect-bubba">
-                                          <img src="http://piccolinomotonetas.com.br/wp-content/uploads/2017/03/bicicleta-Vermelho-1-600x600.jpg" alt="img02"/>
-                                          <figcaption>
-                                            <h5>Artigo<br><span>Mobilidade urbana</span></h5>
-                                            <p>Grandes Desafios da Engenharia<br>Projeto Final</p>
-                                            <a href="./project_artigoGDE.html">View more</a>
-                                          </figcaption>     
-                                        </figure>
-                                      </div>
-                                  </div>
-                                </div>
-                        </div>
-                        
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-    </div>
+  </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Sobre nós</h5>
+            <p class="grey-text text-lighten-4">A Insper Jr. Consulting é uma organização sem fins lucrativos, prestadora de serviços de consultoria nas áreas de Economia e Administração.</p>
 
 
-    <br></br>
-   </div>
-   <footer class="page-footer #455a64 blue-grey darken-2 section scrollspy">
-      <div  class="section scrollspy">
-        <div class="container">
-          <div class="row">
-                  <div class="col l8 s12">
-                    <iframe height="400" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://arthurolga.wufoo.com/embed/m1xny7vp0sgxn8d/"><a href="https://arthurolga.wufoo.com/forms/m1xny7vp0sgxn8d/">Fill out my Wufoo form!</a></iframe><div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"></div>        
-                  </div>
-                  <div id="contato" class="col l4 s4">
-                    <ul>
-                        <li>
-                            <a class="github-button" href="https://github.com/ArthurOlga" data-size="large" data-show-count="true" aria-label="Follow @ArthurOlga on GitHub">Follow @ArthurOlga</a>
-                        </li>
-                        
-                    </ul>
-                  </div>
-              
-              
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Facebook</a></li>
+              <li><a class="white-text" href="#!">Instagram</a></li>
+              <li><a class="white-text" href="#!">Twitter</a></li>
+            </ul>
           </div>
         </div>
-      </div>  
-        
-        
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <a class="brown-text text-lighten-3"> Made by </a> <a class="brown-text text-lighten-5" href="https://arthurolga.github.io">Arthur Olga</a>
+        </div>
+      </div>
     </footer>
-      
-</body>
 
 
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
 
-</html>
+  </body>
+  </html>
