@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!-- Sim, eu estava com preguiça de fazer o CSS e peguei do materialize, me julgue -->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+  <body style="background-color:#333">
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+    
+  <img id="funny-gif" height="40px" src="gifs-and-stupid-stuff/party_parrot.gif"/> 
+      <br><br>
+      <h1 class="header center orange-text">Bem vindo ao Tech Donut</h1>
+      <div class="row center">
+        <h5 class="header col s12 orange-text">Gerador de perguntas sobre tecnologia para puxar papo  </h5>
+        
+      </div>
+      <br>
+      <div class="row center">
+        <h5 style="color:#fff;margin:30px" id="question"> </h5>
+        <a id="shuffle-question" onclick="shuffleQuestion()" class="btn-large waves-effect waves-light orange">Gerar pergunta</a>
+        <br><br>
+        <br><br>
+        
+      </div>
+      <br><br>
+      
+
+    </div>
+  </div>
+  <script>
+  // Ta xeretando oq aq? Quer ver todas as perguntas pq?
+  const listQuestions = [
+    "Que tipo de música você escuta codando?",
+    "Qual é o seu IDE favorito e pq?",
+    "Qual foi a linguagem/framework mais diferente que você já mexeu e oq vc fez?",
+    "Qual é o seu interesse de Tech que você quer muito aprender mas ainda não deu tempo?",
+    "Identação com dois espaços ou com tab? Briguem!",
+    "Qual é aquela linguagem que você não aguenta mais ver na sua frente?",
+    "Qual foi o software mais estranho que você ja trabalhou?",
+    "Como você começou a programar?",
+    "Qual foi a primeira linguagem que você aprendeu? Você ainda gosta dela?",
+    "Qual o filme/série que tem tudo a ver com Tech e programação que você mais curte?",
+    "Qual o bug que você já teve mais dor de cabeça na sua empresa?",
+    "Já teve que fazer hotfix em produção por alguma burrada? Compartilhe",
+    "Se você fosse refazer todo o sistema da sua empresa, que stack você escolheria?"
+  ];
+  const listMojis = [
+    "party_parrot.gif",
+    "catmoji.gif",
+    "jumpy-blob.gif",
+    "cat.gif",
+  ]
+  shuffleQuestion = () => {
+    let question = document.getElementById('question');
+    question.innerHTML = listQuestions[Math.floor(Math.random() * listQuestions.length)];
+
+    let funnyGIF = document.getElementById('funny-gif');
+    funnyGIF.src = "gifs-and-stupid-stuff/"+listMojis[Math.floor(Math.random() * listMojis.length)];
+  }
+  </script>
+</body>
+</html>
