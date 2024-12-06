@@ -55,6 +55,9 @@
             transform: translateX(-50%);
             display: none;
             z-index: 100;
+            width: 100%;
+            max-width: 300px;
+            padding: 20px;
         }
 
         .movement-controls {
@@ -64,30 +67,35 @@
         }
 
         .control-button {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.6);
-            color: rgba(255, 255, 255, 0.8);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            color: white;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 30px;
             touch-action: none;
             user-select: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .action-controls {
             display: none;
         }
 
-        @media (max-width: 768px) {
+        @media (hover: none) and (pointer: coarse), (max-width: 768px) {
             #mobileControls {
-                display: block;
+                display: block !important;
             }
             #debugInfo {
-                font-size: 12px;
+                font-size: 14px;
+                padding: 15px;
+            }
+            .control-button {
+                opacity: 0.8;
             }
         }
 
@@ -726,8 +734,28 @@
             requestAnimationFrame(gameLoop);
         }
 
-        // Mobile controls
+        function isMobileDevice() {
+            return (
+                navigator.maxTouchPoints > 0 ||
+                navigator.msMaxTouchPoints > 0 ||
+                /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+            );
+        }
+
+        // Update mobile controls setup
         function setupMobileControls() {
+            const mobileControls = document.getElementById('mobileControls');
+            
+            if (isMobileDevice()) {
+                mobileControls.style.display = 'block';
+                // Prevent default touch behaviors
+                document.addEventListener('touchmove', function(e) {
+                    if (e.target.classList.contains('control-button')) {
+                        e.preventDefault();
+                    }
+                }, { passive: false });
+            }
+
             const buttons = {
                 'upButton': 'w',
                 'downButton': 's',
@@ -742,6 +770,10 @@
                 if (isPressed && key === ' ') {
                     checkInteraction();
                 }
+                // Add visual feedback
+                const button = document.getElementById(buttonId);
+                button.style.opacity = isPressed ? '1' : '0.8';
+                button.style.transform = isPressed ? 'scale(0.95)' : 'scale(1)';
             }
 
             Object.keys(buttons).forEach(buttonId => {
@@ -751,14 +783,14 @@
                 button.addEventListener('touchstart', (e) => {
                     e.preventDefault();
                     handleTouch(buttonId, true);
-                });
+                }, { passive: false });
                 
                 button.addEventListener('touchend', (e) => {
                     e.preventDefault();
                     handleTouch(buttonId, false);
-                });
+                }, { passive: false });
                 
-                // Handle mouse events for testing on desktop
+                // Handle mouse events for testing
                 button.addEventListener('mousedown', (e) => {
                     e.preventDefault();
                     handleTouch(buttonId, true);
@@ -771,13 +803,16 @@
             });
         }
 
+        // Call setup after window loads
+        window.addEventListener('load', function() {
+            setupMobileControls();
+        });
+
         // Add resize handler
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
-
-        setupMobileControls();
 
         gameLoop();
     </script>
